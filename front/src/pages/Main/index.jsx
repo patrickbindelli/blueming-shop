@@ -22,10 +22,10 @@ export const Main = () => {
           </a>
         </div>
         <div className="search">
-          <button>Buscar</button>
           <div className="search-box">
             <input placeholder="Procurar produto..." />
           </div>
+          <button>Buscar</button>
         </div>
         <div className="contato-wrapper">
           <span className="contato">Entre em contato pelo nosso WhatsApp</span>
