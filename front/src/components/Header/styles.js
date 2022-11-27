@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 576px) {
     flex-direction: column;
     gap: 5px;
     padding: 5px;
@@ -29,7 +29,7 @@ export const Container = styled.div`
   }
 
   .menu {
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 576px) {
       display: block;
     }
     position: absolute;
@@ -40,24 +40,30 @@ export const Container = styled.div`
   }
 `;
 
-export const Logo = styled.a`
-  @media only screen and (max-width: 600px) {
+export const Logo = styled.div`
+  @media only screen and (max-width: 576px) {
     justify-content: center;
-    height: 50px;
   }
-  display: flex;
-  height: 70px;
 
-  cursor: pointer;
-  img {
-    border-radius: 10px;
+  display: flex;
+  align-items: center;
+
+  .logo-link {
+    img {
+      @media only screen and (max-width: 576px) {
+        height: 50px;
+      }
+      height: 70px;
+      border-radius: 10px;
+    }
   }
+  cursor: pointer;
 `;
 
 export const Icons = styled.div`
   display: flex;
   justify-content: space-around;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 576px) {
     display: none;
   }
 `;
@@ -68,7 +74,7 @@ export const Middle = styled.div`
   width: 100%;
   gap: 10px;
   padding: 0px 15px 0px;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 576px) {
     justify-content: center;
     button {
       display: none;
@@ -91,7 +97,7 @@ export const Middle = styled.div`
   }
 
   .search-box {
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 576px) {
       width: 100%;
     }
     width: 380px;

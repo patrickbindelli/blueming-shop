@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  @media only screen and (max-width: 650px) {
+    width: 100%;
+    border-radius: 0px;
+  }
+
   width: 190px;
   height: 250px;
   background-color: white;
@@ -24,9 +29,13 @@ export const Container = styled.div`
     height: 170px;
 
     img {
+      @media only screen and (max-width: 650px) {
+        border-radius: 0px;
+      }
       border-radius: 5px;
-      height: 100%;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 

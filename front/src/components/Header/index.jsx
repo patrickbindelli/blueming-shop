@@ -6,8 +6,10 @@ export const Header = () => {
   return (
     <Container>
       <HiMenu className="menu" size={40} />
-      <Logo href={"/"}>
-        <img src={logo} />
+      <Logo>
+        <a className="logo-link" href={"/"}>
+          <img src={logo} />
+        </a>
       </Logo>
       <Middle>
         <div className="search-box">

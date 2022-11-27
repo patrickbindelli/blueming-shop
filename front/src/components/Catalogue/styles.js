@@ -35,30 +35,31 @@ export const Title = styled.div`
   display: flex;
   justify-content: flex-start;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 576px) {
     justify-content: center;
   }
 `;
 
 export const Content = styled.div`
-  @media only screen and (max-width: 1900px) {
+  @media only screen and (max-width: 1400px) {
     grid-template-columns: fit-content(100%) fit-content(100%) fit-content(100%) fit-content(
         100%
       );
   }
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1200px) {
     grid-template-columns: fit-content(100%) fit-content(100%) fit-content(100%);
   }
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     grid-template-columns: fit-content(100%) fit-content(100%);
   }
 
-  @media only screen and (max-width: 600px) {
-    grid-template-columns: fit-content(100%);
+  @media only screen and (max-width: 650px) {
+    grid-template-columns: 100%;
   }
 
+  width: 100%;
   display: grid;
   column-gap: 40px;
   row-gap: 30px;
