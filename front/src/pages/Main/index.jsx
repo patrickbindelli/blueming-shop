@@ -1,44 +1,36 @@
-import React from "react";
-import {
-  Container,
-  LateralContainer,
-  MenuContainer,
-  Content,
-  HBox,
-} from "./styles";
+import React, { useState, useEffect } from "react";
+import { Container, LateralContainer, Content, HBox, FullMenu } from "./styles";
 import { Catalogue } from "../../components/Catalogue";
-import { FilterMenu } from "../../components/FilterMenu";
 import { Header } from "../../components/Header";
+import { LateralMenu } from "../../components/LateralMenu";
 
 export const Main = () => {
+  const [isHidden, setIsHidden] = useState(true);
+
+  const handleSideBar = () => {
+    setIsHidden(!isHidden);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setIsHidden(true);
+    });
+  }, []);
+
+  if (!isHidden) {
+    return (
+      <FullMenu hidden={isHidden}>
+        <LateralMenu onclick={handleSideBar} />
+      </FullMenu>
+    );
+  }
+
   return (
     <Container>
-      <Header />
+      <Header onclick={handleSideBar} />
       <HBox>
         <LateralContainer>
-          <MenuContainer>
-            <div className="filtros-header">
-              <span className="filtros-title">FILTROS</span>
-            </div>
-            <FilterMenu
-              title={"Por Bandas"}
-              data={[
-                { value: "BTS" },
-                { value: "BLACKPINK" },
-                { value: "EXO" },
-                { value: "TWICE" },
-              ]}
-            />
-            <FilterMenu
-              title={"Por Produtos"}
-              data={[
-                { value: "Adesivo" },
-                { value: "Ecobag" },
-                { value: "Bottons" },
-                { value: "Camisas" },
-              ]}
-            />
-          </MenuContainer>
+          <LateralMenu hidden={false} animate={false} />
         </LateralContainer>
         <Content>
           <Catalogue />

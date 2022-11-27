@@ -13,7 +13,20 @@ export default createGlobalStyle`
     color: white;
     background: linear-gradient(107.46deg, #7F80DD 0.5%, #A587D7 100%);
     height: 100vh;
-    overflow: hidden;
+    
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background: #8080dd;
+      border: 1px solid white;
+    }
   }
 
   .App{

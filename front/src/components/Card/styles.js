@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  user-select: none;
   @media only screen and (max-width: 650px) {
     width: 100%;
     border-radius: 0px;

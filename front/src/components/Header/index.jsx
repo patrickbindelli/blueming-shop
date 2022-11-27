@@ -2,10 +2,10 @@ import { Container, Middle, Logo, Icons } from "./styles";
 import logo from "./logo.svg";
 import { FaWhatsapp, FaInstagram, FaSearch } from "react-icons/fa";
 import { HiMenu } from "react-icons/hi";
-export const Header = () => {
+export const Header = ({ onclick }) => {
   return (
     <Container>
-      <HiMenu className="menu" size={40} />
+      <HiMenu className="menu" size={40} onClick={onclick} />
       <Logo>
         <a className="logo-link" href={"/"}>
           <img src={logo} />
@@ -14,9 +14,10 @@ export const Header = () => {
       <Middle>
         <div className="search-box">
           <input placeholder="Procurar produto..." />
-          <FaSearch size={20} />
+          <button>
+            <FaSearch size={20} />
+          </button>
         </div>
-        <button>Buscar</button>
       </Middle>
       <Icons>
         <FaWhatsapp size={25} />

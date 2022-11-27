@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: 650px) {
     flex-direction: column;
     gap: 5px;
     padding: 5px;
@@ -29,7 +29,7 @@ export const Container = styled.div`
   }
 
   .menu {
-    @media only screen and (max-width: 576px) {
+    @media only screen and (max-width: 650px) {
       display: block;
     }
     position: absolute;
@@ -41,16 +41,16 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.div`
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: 650px) {
     justify-content: center;
   }
-
   display: flex;
   align-items: center;
+  flex-grow: 2;
 
   .logo-link {
     img {
-      @media only screen and (max-width: 576px) {
+      @media only screen and (max-width: 650px) {
         height: 50px;
       }
       height: 70px;
@@ -63,41 +63,33 @@ export const Logo = styled.div`
 export const Icons = styled.div`
   display: flex;
   justify-content: space-around;
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: 650px) {
     display: none;
   }
 `;
 
 export const Middle = styled.div`
-  flex-grow: 3;
+  @media only screen and (max-width: 650px) {
+    width: 100%;
+  }
   display: flex;
-  width: 100%;
+  flex-grow: 5;
   gap: 10px;
   padding: 0px 15px 0px;
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: 650px) {
     justify-content: center;
-    button {
-      display: none;
-    }
   }
 
   button {
-    height: 30px;
-    width: 60px;
     border: none;
-    color: white;
-    background-color: #9e86d8;
+    background-color: transparent;
     cursor: pointer;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-
-    :hover {
-      background-color: #846eb9;
-    }
+    margin-right: 5px;
   }
 
   .search-box {
-    @media only screen and (max-width: 576px) {
+    @media only screen and (max-width: 650px) {
       width: 100%;
     }
     width: 380px;
@@ -108,9 +100,9 @@ export const Middle = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px;
 
     input {
+      margin: 0px 5px 0px 5px;
       height: 100%;
       width: 100%;
       border: none;

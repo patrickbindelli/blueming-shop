@@ -6,25 +6,10 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 30px;
   position: relative;
-  max-height: 100vh;
-  overflow: hidden;
+  flex-grow: 3;
   overflow-y: auto;
   align-items: center;
-  padding: 20px 50px 200px 50px;
-
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  ::-webkit-scrollbar-track {
-    box-shadow: -2px 0px 2px rgba(0, 0, 0, 0.25);
-    background-color: #9e86d8;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: #8181dd;
-  }
+  padding: 20px 50px 0px 50px;
 `;
 
 export const Title = styled.div`
@@ -57,6 +42,7 @@ export const Content = styled.div`
 
   @media only screen and (max-width: 650px) {
     grid-template-columns: 100%;
+    row-gap: 10px;
   }
 
   width: 100%;
