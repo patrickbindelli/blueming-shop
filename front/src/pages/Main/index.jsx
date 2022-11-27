@@ -1,36 +1,19 @@
 import React from "react";
-import logo from "./logo2.svg";
 import {
   Container,
-  Header,
   LateralContainer,
-  Catalogue,
   MenuContainer,
   Content,
   HBox,
 } from "./styles";
+import { Catalogue } from "../../components/Catalogue";
 import { FilterMenu } from "../../components/FilterMenu";
-import { Card } from "../../components/Card";
+import { Header } from "../../components/Header";
 
 export const Main = () => {
   return (
     <Container>
-      <Header>
-        <div className="logo">
-          <a href="/">
-            <img src={logo} />
-          </a>
-        </div>
-        <div className="search">
-          <div className="search-box">
-            <input placeholder="Procurar produto..." />
-          </div>
-          <button>Buscar</button>
-        </div>
-        <div className="contato-wrapper">
-          <span className="contato">Entre em contato pelo nosso WhatsApp</span>
-        </div>
-      </Header>
+      <Header />
       <HBox>
         <LateralContainer>
           <MenuContainer>
@@ -58,47 +41,7 @@ export const Main = () => {
           </MenuContainer>
         </LateralContainer>
         <Content>
-          <Catalogue>
-            <div className="catalogue-title-wrapper">
-              <span className="catalogue-title">Produtos</span>
-            </div>
-            <div className="cards">
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-            </div>
-          </Catalogue>
+          <Catalogue />
         </Content>
       </HBox>
     </Container>

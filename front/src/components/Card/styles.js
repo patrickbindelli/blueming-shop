@@ -32,10 +32,10 @@ export const Container = styled.div`
 
   .info {
     padding: 5px;
-    height: 100%;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+
     .price-wrapper {
       display: flex;
       flex-direction: column;
@@ -53,6 +53,6 @@ export const Container = styled.div`
   }
 
   :hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 `;

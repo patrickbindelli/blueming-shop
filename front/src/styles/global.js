@@ -7,22 +7,20 @@ export default createGlobalStyle`
      box-sizing: border-box;
   }
 
-  html, body, #root, .App {
-    height: 100%;
-  }
-
   body{
     font-size: 12px;
     font-family: 'Poppins', sans-serif;
     color: white;
     background: linear-gradient(107.46deg, #7F80DD 0.5%, #A587D7 100%);
-    overflow-y: hidden;
+    height: 100vh;
+    overflow: hidden;
   }
 
   .App{
     display: flex;
-    padding-top: 20px;
+    max-height: 100%;
     align-items: flex-start;
     justify-content: center;
+    padding: 10px;
   }
 `;
