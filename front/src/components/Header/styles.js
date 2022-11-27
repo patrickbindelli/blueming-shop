@@ -49,7 +49,6 @@ export const Logo = styled.a`
   height: 70px;
 
   cursor: pointer;
-  width: 405px;
   img {
     border-radius: 10px;
   }

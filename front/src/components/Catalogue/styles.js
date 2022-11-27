@@ -28,7 +28,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 500;
   padding-top: 20px;
   width: 100%;
@@ -59,7 +59,6 @@ export const Content = styled.div`
     grid-template-columns: fit-content(100%);
   }
 
-  min-width: 420px;
   display: grid;
   column-gap: 40px;
   row-gap: 30px;

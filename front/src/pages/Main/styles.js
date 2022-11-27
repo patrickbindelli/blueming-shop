@@ -47,6 +47,7 @@ export const MenuContainer = styled.div`
 `;
 
 export const Content = styled.a`
+  width: 100%;
   display: flex;
   justify-content: center;
 `;
