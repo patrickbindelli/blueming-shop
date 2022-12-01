@@ -3,19 +3,33 @@ from django.core.validators import MinValueValidator
 from django.contrib import messages
 from django.core.exceptions import ValidationError
 from django.forms.forms import NON_FIELD_ERRORS
+from django.utils.html import mark_safe
 
 class TipoProduto(models.Model):
   nome = models.CharField(max_length=50)
   
   def __str__(self) -> str:
     return self.nome
-  
+
 class Produto(models.Model): 
   nome = models.CharField(max_length=100)
-  preco = models.DecimalField(max_digits=6, decimal_places=2)
-  descricao = models.TextField(max_length=200)
+  descricao = models.TextField(max_length=200 ,blank=True, null=True)
+  preco = models.DecimalField(max_digits=6, decimal_places=2, verbose_name='Preço')
   tipo = models.ForeignKey(TipoProduto, on_delete=models.CASCADE)
   quantidade = models.PositiveIntegerField(null=False, blank=False, default=0, validators=[MinValueValidator(0)])
+  imagem =models.ImageField(blank=True, null=True, upload_to='products')
+  
+  def preco_real(self):
+    return "R$%s" % self.preco if self.preco else ""
+      
+  def image_preview(self):
+    if self.imagem:
+      return mark_safe('<img src="{0}" width="100" height="100" style="object-fit:contain" />'.format(self.imagem.url))
+    else:
+      return '(No image)'
+
+  preco_real.short_description = 'Preço'
+  image_preview.short_description = 'Preview'
   
   def __str__(self) -> str:
     return self.nome

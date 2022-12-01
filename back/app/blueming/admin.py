@@ -3,7 +3,6 @@ from django.contrib import messages
 from django import forms
 
 from .models import Produto, TipoProduto, Venda, ProdutoVenda
-# Register your models here.
 
 @admin.register(TipoProduto)
 class TipoProduto(admin.ModelAdmin):
@@ -15,6 +14,7 @@ class TipoProduto(admin.ModelAdmin):
 class ProdutoAdmin(admin.ModelAdmin):
   list_display = ('nome', 'preco', 'tipo', 'quantidade')
   list_filter = ('preco', 'tipo')
+  readonly_fields = ('image_preview', )
 
 class ProdutoVendaInline(admin.TabularInline):
     model = Venda.produtos.through
