@@ -11,7 +11,7 @@ export const Catalogue = () => {
     console.log(data);
   }, [data])
 
-  if(loading){
+  if(loading || error){
     return (
       <LoadingContainer>
         <div className="icon">
@@ -28,163 +28,11 @@ export const Catalogue = () => {
       </Title>
       <ContentWrapper>
       <Content>
-      {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
         {data.map((produto, index) => {
           return(
             <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
           )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-        {data.map((produto, index) => {
-          return(
-            <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
-          )
-        })}
-
-        
+        })}    
       </Content>
       </ContentWrapper>
     </Container>
