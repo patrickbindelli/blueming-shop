@@ -12,6 +12,7 @@ services:
     build:
       context: ./front
     volumes:
+      - static_data:/front/build/static
       - react_build:/front/build
   proxy:
     build:

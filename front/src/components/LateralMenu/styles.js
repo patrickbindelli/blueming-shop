@@ -23,7 +23,8 @@ export const Container = styled.div`
     @media only screen and (max-width: 650px) {
       display: block;
     }
-    position: absolute;
+    position: fixed;
+    z-index: 1;
     top: 10px;
     right: 15px;
     cursor: pointer;

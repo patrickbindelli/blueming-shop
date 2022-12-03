@@ -1,4 +1,15 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
+
+const appearAnim = keyframes`
+  from{
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.div`
   user-select: none;
@@ -7,12 +18,15 @@ export const Container = styled.div`
     border-radius: 0px;
   }
 
-  width: 190px;
+  animation: ${appearAnim} .2s forwards 0.4s ease-in-out;
+
+  opacity: 0;
+  width: 190px; 
   height: 250px;
   background-color: white;
   border-radius: 5px;
   color: black;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.5s 0.2s  ease-in-out;
 
   cursor: pointer;
 

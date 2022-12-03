@@ -19,8 +19,8 @@ export const Container = styled.div`
   label:hover > .checkbox,
   .checkbox {
     display: inline-block;
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     border: 1px solid white;
     border-radius: 4px;
     transition: box-shadow 0.2s, 0.2s ease-in-out;

@@ -1,4 +1,13 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, keyframes } from "styled-components";
+
+const appearOpacity = keyframes`
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+`;
 
 export default createGlobalStyle`
   *{
@@ -12,28 +21,20 @@ export default createGlobalStyle`
     font-family: 'Poppins', sans-serif;
     color: white;
     background: linear-gradient(107.46deg, #7F80DD 0.5%, #A587D7 100%);
+  
+  }
+
+  html, body, .App{
     height: 100vh;
-    
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background-color: transparent;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      border-radius: 5px;
-      background: #8080dd;
-      border: 1px solid white;
-    }
+    overflow: hidden;
   }
 
   .App{
     display: flex;
-    max-height: 100%;
     align-items: flex-start;
     justify-content: center;
-    padding: 10px;
+    padding: 10px 10px 0px 10px;
+    opacity: 0;
+    animation: ${appearOpacity} 0.2s forwards 0.2s ease-in-out;
   }
 `;

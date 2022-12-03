@@ -10,7 +10,7 @@ export const LateralMenu = ({ onclick }) => {
         <span className="filtros-title">FILTROS</span>
       </div>
       <FilterMenu
-        title={"Por Bandas"}
+        title={"Por Banda"}
         data={[
           { value: "BTS" },
           { value: "BLACKPINK" },
@@ -19,7 +19,7 @@ export const LateralMenu = ({ onclick }) => {
         ]}
       />
       <FilterMenu
-        title={"Por Produtos"}
+        title={"Por Produto"}
         data={[
           { value: "Adesivo" },
           { value: "Ecobag" },

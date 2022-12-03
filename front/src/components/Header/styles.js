@@ -46,7 +46,7 @@ export const Logo = styled.div`
   }
   display: flex;
   align-items: center;
-  flex-grow: 2;
+  width: 27%;
 
   .logo-link {
     img {
@@ -62,7 +62,8 @@ export const Logo = styled.div`
 
 export const Icons = styled.div`
   display: flex;
-  justify-content: space-around;
+  
+  gap: 10px;
   @media only screen and (max-width: 650px) {
     display: none;
   }
@@ -75,9 +76,9 @@ export const Middle = styled.div`
   display: flex;
   flex-grow: 5;
   gap: 10px;
-  padding: 0px 15px 0px;
   @media only screen and (max-width: 650px) {
     justify-content: center;
+    padding: 0px 15px 0px 15px;
   }
 
   button {
