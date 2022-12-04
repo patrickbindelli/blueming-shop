@@ -1,0 +1,38 @@
+services:
+  nginx: 
+    restart: unless-stopped
+    build:
+        context: .
+        dockerfile: ./docker/nginx/Dockerfile
+    ports:
+        - 8080:8080
+    volumes:
+        - static_volume:/app/backend/app/static
+        - media_volume:/app/backend/app/media
+        - ./docker/nginx/development:/etc/nginx/conf.d
+    depends_on: 
+        - backend
+  backend:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./docker/backend/Dockerfile
+    entrypoint: /app/docker/backend/entrypoint.sh
+    volumes:
+        - static_volume:/app/backend/app/static
+        - media_volume:/app/backend/app/media
+    environment:
+     
+    expose:
+        - 8000   
+  database:
+    image: postgres:15.1-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+     
+
+volumes:
+  static_volume: {}
+  media_volume: {}
+  postgres_data:
