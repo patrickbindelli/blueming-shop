@@ -4,7 +4,7 @@ import { FilterMenu } from "../FilterMenu";
 import { HiMenu } from "react-icons/hi";
 import useFetch from "../../hooks/useFetch";
 
-export const LateralMenu = ({ onclick, checkedTipos, checkedBandas, onChange}) => {
+export const LateralMenu = ({ onclick, checkedTipos, checkedBandas, setCheckedTipos, setCheckedBandas}) => {
   const {data: dataBandas, error: errorBandas, loading: loadingBandas} = useFetch('/api/bandas/')
   const {data: dataTipos, error: errorTipos, loading: loadingTipos} = useFetch('/api/tipos/')
 
@@ -30,19 +30,19 @@ export const LateralMenu = ({ onclick, checkedTipos, checkedBandas, onChange}) =
       {
         !loadingBandas && 
         <FilterMenu
-        checkedItems={checkedTipos}
+        checkedItems={checkedBandas}
         title={"Por Banda"}
         data={dataBandas}
-        onChange={onChange}
+        onChange={setCheckedBandas}
         />
       }
       {
         !loadingTipos && 
         <FilterMenu
-        checkedItems={checkedBandas}
+        checkedItems={checkedTipos}
         title={"Por Produto"}
         data={dataTipos}
-        onChange={onChange}
+        onChange={setCheckedTipos}
         />
       }
     </Container>

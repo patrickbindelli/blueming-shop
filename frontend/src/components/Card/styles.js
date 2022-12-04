@@ -18,8 +18,7 @@ export const Container = styled.div`
     border-radius: 0px;
   }
 
-  animation: ${appearAnim} normal 0.4s 0.2s ease-in-out;
-  position: relative;
+  
 
   width: 190px; 
   height: 250px;

@@ -2,7 +2,20 @@ import { Container, Middle, Logo, Icons } from "./styles";
 import logo from "./logo.svg";
 import { FaWhatsapp, FaInstagram, FaSearch } from "react-icons/fa";
 import { HiMenu } from "react-icons/hi";
-export const Header = ({ onclick }) => {
+import { useState } from "react";
+export const Header = ({ onclick, setSearchValue }) => {
+
+  const [inputValue, setInputValue] = useState('');
+
+  const inputValueHandler = event => {
+    setInputValue(event.target.value);
+  };
+
+  const handleSearch = () => {
+    console.log('aaaa')
+    setSearchValue(inputValue);
+  }
+
   return (
     <Container>
       <HiMenu className="menu" size={40} onClick={onclick} />
@@ -13,8 +26,8 @@ export const Header = ({ onclick }) => {
       </Logo>
       <Middle>
         <div className="search-box">
-          <input placeholder="Procurar produto..." />
-          <button>
+          <input placeholder="Procurar produto..." value={inputValue} onChange={inputValueHandler}/>
+          <button onClick={handleSearch}>
             <FaSearch size={20} />
           </button>
         </div>

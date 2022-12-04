@@ -14,11 +14,14 @@ export const FilterMenuItem = ({id, label, checkedItems, onChange}) => {
   const handleClick = () => {
     setIsChecked(!isChecked);
     if(checkedItems.has(id)){
-      checkedItems.delete(id)
+      const updatedMap = new Map(checkedItems);  
+      updatedMap.delete(id);
+      onChange(updatedMap);
     }else{
-      checkedItems.set(id)
+      const updatedMap = new Map(checkedItems);  
+      updatedMap.set(id);
+      onChange(updatedMap);
     }
-    onChange();
   }
   
   return (

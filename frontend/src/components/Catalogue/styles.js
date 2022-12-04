@@ -35,7 +35,6 @@ export const Container = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   align-items: flex-start;
   justify-content: space-between;
   animation: ${appearOpacity} .5s .2s forwards ease-in-out;
@@ -46,8 +45,10 @@ export const Title = styled.div`
   font-weight: 500;
   padding-top: 20px;
   width: 100%;
+  height: 90px;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   padding: 0px 0px 0px 30px;
 
   @media only screen and (max-width: 576px) {

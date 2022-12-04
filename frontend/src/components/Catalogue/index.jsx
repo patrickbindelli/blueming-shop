@@ -21,7 +21,7 @@ export const Catalogue = ({data, error, loading}) => {
       </Title>
       <ContentWrapper>
       <Content>
-        {data.length && data.map((produto, index) => {
+        {data.map((produto, index) => {
           return(
             <Card key={index} name={produto.nome} price={produto.preco} cover={produto.imagem}/>
           )
