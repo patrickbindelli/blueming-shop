@@ -6,7 +6,6 @@ export const FilterMenuItem = ({id, label, checkedItems, onChange}) => {
 
   useEffect(() => {
     if(checkedItems.has(id)){
-      console.log(checkedItems)
       setIsChecked(true)
     }
   }, [])

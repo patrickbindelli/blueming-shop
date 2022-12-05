@@ -19,7 +19,6 @@ export const Main = () => {
   };
 
   useEffect(() => {
-    console.log(checkedBandas)
     refetch();
   }, [checkedTipos, checkedBandas, searchValue])
 

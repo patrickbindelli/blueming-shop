@@ -12,7 +12,6 @@ export const Header = ({ onclick, setSearchValue }) => {
   };
 
   const handleSearch = () => {
-    console.log('aaaa')
     setSearchValue(inputValue);
   }
 
