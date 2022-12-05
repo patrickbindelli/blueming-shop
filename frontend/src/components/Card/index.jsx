@@ -7,7 +7,7 @@ export const Card = ({name, price, cover}) => {
   return (
     <Container>
       <div className="img-wrapper">
-        <img src={`${url}${cover}`} />
+        <img src={`${cover}`} />
       </div>
       <div className="info">
         <div className="title-wrapper">
