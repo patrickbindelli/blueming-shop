@@ -2,10 +2,12 @@ import React from "react";
 import { Container } from "./styles";
 
 export const Card = ({name, price, cover}) => {
+  const url = window.location.origin;
+
   return (
     <Container>
       <div className="img-wrapper">
-        <img src={`http://localhost:8080${cover}`} />
+        <img src={`${url}${cover}`} />
       </div>
       <div className="info">
         <div className="title-wrapper">
