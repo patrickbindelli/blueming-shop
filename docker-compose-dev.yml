@@ -7,8 +7,8 @@ services:
     ports:
         - 8080:8080
     volumes:
-        - static_volume:/app/backend/app/static
-        - media_volume:/app/backend/app/media
+        - static_volume:/app/backend/app/django_static
+        - media_volume:/app/backend/app/django_media
         - ./docker/nginx/development:/etc/nginx/conf.d
     depends_on: 
         - backend
@@ -19,10 +19,10 @@ services:
       dockerfile: ./docker/backend/Dockerfile
     entrypoint: /app/docker/backend/entrypoint.sh
     volumes:
-        - static_volume:/app/backend/app/static
-        - media_volume:/app/backend/app/media
+        - static_volume:/app/backend/app/django_static
+        - media_volume:/app/backend/app/django_media
     environment:
-     
+      
     expose:
         - 8000   
   database:
@@ -30,7 +30,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-     
+        
 
 volumes:
   static_volume: {}
