@@ -7,6 +7,21 @@ export const Container = styled.div`
   position: relative;
   overflow: auto;
   padding-bottom: 200px;
+
+  ::-webkit-scrollbar {
+      width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: white;
+    border: 1px solid white;
+  }
+  
   .filtros-header {
     border-bottom: 1px solid white;
     height: 64px;
