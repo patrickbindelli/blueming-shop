@@ -11,6 +11,8 @@ class ProdutoView(APIView):
     types = request.query_params['types']
     bands = request.query_params['bands']
     
+    queryset = Produto.objects.all()
+    
     if(types != ''):
       types = types.split(',')
     else:
@@ -20,17 +22,16 @@ class ProdutoView(APIView):
       bands = bands.split(',')
     else:
       bands = []
-    
-    queryset = Produto.objects.all()
+
     
     if(len(types) > 0):
-       queryset = queryset.filter(nome = search, id__in=types)
+       queryset = queryset.filter(tipo__in=types)
     
     if(len(bands) > 0):
-       queryset = Produto.objects.filter(nome = search, banda__in=bands)
+       queryset = queryset.filter(banda__in=bands)
     
     if(search != ''):
-      queryset = Produto.objects.filter(nome__contains = search)
+      queryset = queryset.filter(nome__contains = search)
    
     serializer = ProdutoSerializer(queryset, many=True)
 

@@ -81,6 +81,7 @@ export const Content = styled.div`
   row-gap: 30px;
   overflow: hidden;
   overflow-y: auto;
+  padding-bottom: 200px;
 
   ::-webkit-scrollbar {
       width: 5px;

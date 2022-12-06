@@ -5,6 +5,8 @@ export const Container = styled.div`
   background-color: #9e86d8;
   height: 100%;
   position: relative;
+  overflow: auto;
+  padding-bottom: 200px;
   .filtros-header {
     border-bottom: 1px solid white;
     height: 64px;
