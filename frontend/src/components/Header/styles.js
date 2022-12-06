@@ -67,6 +67,26 @@ export const Icons = styled.div`
   @media only screen and (max-width: 650px) {
     display: none;
   }
+
+  a{
+    text-decoration: none;
+    cursor: pointer;
+    
+    :visited {
+      color: white;
+      text-decoration: none;
+    }
+
+    :hover {
+      color: white;
+      text-decoration: none;
+    }
+
+    :active {
+      color: white;
+      text-decoration: none;
+    }
+  }
 `;
 
 export const Middle = styled.div`

@@ -24,7 +24,9 @@ export const Main = () => {
 
   useEffect(() => {
     window.addEventListener("resize", () => {
-      setIsHidden(true);
+      if(window.innerWidth > 650){
+        setIsHidden(true);
+      }
     });
   }, []);
 

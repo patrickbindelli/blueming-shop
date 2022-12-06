@@ -32,8 +32,8 @@ export const Header = ({ onclick, setSearchValue }) => {
         </div>
       </Middle>
       <Icons>
-        <FaWhatsapp size={25} />
-        <FaInstagram size={25} />
+        <a><FaWhatsapp size={25} /></a>
+        <a href={'https://www.instagram.com/blueming.kshop/'}><FaInstagram size={25} /></a>
       </Icons>
     </Container>
   );
